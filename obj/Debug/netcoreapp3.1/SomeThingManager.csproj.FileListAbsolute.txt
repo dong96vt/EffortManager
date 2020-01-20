@@ -115,3 +115,9 @@ c:\Users\DONG\Desktop\.Net-Core\EffortManager\obj\Debug\netcoreapp3.1\SomeThingM
 c:\Users\DONG\Desktop\.Net-Core\EffortManager\obj\Debug\netcoreapp3.1\SomeThingManager.dll
 c:\Users\DONG\Desktop\.Net-Core\EffortManager\obj\Debug\netcoreapp3.1\SomeThingManager.pdb
 C:\Users\DONG\Desktop\.Net-Core\EffortManager\obj\Debug\netcoreapp3.1\SomeThingManager.csproj.CopyComplete
+c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
