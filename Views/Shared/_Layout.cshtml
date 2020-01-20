@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SomeThingManager</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand float-left" asp-area="" asp-controller="RevenueExpenditure" asp-action="Index">SomeThingManager</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="float-right" asp-area="" asp-controller="Home" asp-action="Index">Đăng xuất</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div id="nav" class="col-3 list-group">
+                <a id="RevenueExpenditure" class="list-group-item list-group-item-action" asp-controller="RevenueExpenditure" asp-action="Index">Thu chi</a>
+                <a id="RevenueExpenditureType" class="list-group-item list-group-item-action" asp-controller="RevenueExpenditureType" asp-action="Index">Loại thu chi</a>
+                <a id="Fund" class="list-group-item list-group-item-action" asp-controller="Fund" asp-action="Index">Quỹ</a>
+                <a id="Statistics" class="list-group-item list-group-item-action" asp-controller="Statistics" asp-action="Index">Thống kê</a>
+            </div>
+            <div id="content" name="content-col" class="col">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - SomeThingManager - <a asp-area="" asp-controller="Home" asp-action="Index">DongNT</a>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

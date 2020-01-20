@@ -1,0 +1,81 @@
+@{ViewData["Title"]="Loại thu chi";}
+<h2 class="display-6">Loại thu chi</h2>
+<hr>
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a id="nav_find_type" class="nav-link" href="#">Tìm kiếm</a>
+            </li>
+            <li class="nav-item">
+                <a id="nav_add_type" class="nav-link" href="#">Thêm</a>
+            </li>
+        </ul>
+    </div>
+    <!--add-->
+    <div id="add_type" class="card-body">
+        <form id="form-search" class="form-inline" method="get" action="#">
+            <input type="text" class="form-control" name="" id="" placeholder="Mã">
+            <input type="text" class="form-control" name="" id="" placeholder="Tên">
+            <input type="submit" class="btn btn-success" value="Thêm">
+        </form>
+        <hr>
+    </div>
+    <!--find-->
+    <div id="find_type" class="card-body">
+        <form id="form-search" class="form-inline" method="get" action="#">
+            <input type="text" class="form-control" name="" id="" placeholder="Mã">
+            <input type="text" class="form-control" name="" id="" placeholder="Tên">
+            <input type="submit" class="btn btn-primary" value="Tìm kiếm">
+        </form>
+        <hr>
+        <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content col-sm-8 offset-2">
+                    <form method="get" action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="my-modal-title">Thông tin chi tiết</h5>
+                            <button class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                        </div>
+                        <div class="modal-body form-inline">
+                            <div class="form-group">
+                                <label for="SID">Mã</label>
+                                <input id="SID" style="margin: 10px;" class="form-control" type="text" readonly name="SID">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Tên</label>
+                                <input id="name" style="margin: 10px;" class="form-control" type="text" name="name">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <input class="btn btn-success" type="submit" value="Lưu">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <table class="table table-sm table-bordered table-hover text-center">
+            <thead class="thead-light">
+                <tr>
+                    <th width=1>Mã</th>
+                    <th>Tên</th>
+                    <th width=1></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-toggle="modal" data-target="#my-modal">1</td>
+                    <td data-toggle="modal" data-target="#my-modal">Lương</td>
+                    <td>
+                        <a href="#" onclick="return confirm_delete()">
+                            <i id="delete" class="material-icons">delete</i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div id="card">
