@@ -121,3 +121,4 @@ c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\w
 c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 c:\Users\DONG\Desktop\.Net-Core\EffortManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+c:\Users\DONG\Desktop\.Net-Core\EffortManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDefault.cshtml.g.cs

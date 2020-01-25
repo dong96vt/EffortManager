@@ -1,0 +1,2 @@
+1. Connect database
+2. Session in .net core (get,set and access in razor)

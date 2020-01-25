@@ -9,7 +9,7 @@ namespace EffortManager.AccessDatabase
         string databaseName;
         string username;
         string password;
-        SqlConnection sqlConnection;
+        public SqlConnection sqlConnection;
 
         public BaseConnection()
         {

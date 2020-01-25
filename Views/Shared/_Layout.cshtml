@@ -14,7 +14,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="float-right" asp-area="" asp-controller="Home" asp-action="Index">Đăng xuất</a>
+                <span>Chào @Context.Session.GetString("USER_FULLNAME") !</span>
+                <a class="float-right" asp-area="" asp-controller="Home" asp-action="Logout">Đăng xuất</a>
             </div>
         </nav>
     </header>

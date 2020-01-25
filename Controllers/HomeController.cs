@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using EffortManager.AccessDatabase.DAO;
+using EffortManager.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using SomeThingManager.Models;
 
@@ -27,6 +30,24 @@ namespace SomeThingManager.Controllers
         {
             return View();
         }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
+        }
+        public IActionResult Login(string username, string password)
+        {
+            AccountDAO accountDAO = new AccountDAO();
+            AccountDTO accountDTO = accountDAO.Login(username, password);
+            if (accountDTO == null)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+            HttpContext.Session.SetInt32("USER_ID", accountDTO.ID);
+            HttpContext.Session.SetString("USER_FULLNAME", accountDTO.FullName);
+            return RedirectToAction("Index", "RevenueExpenditure");
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

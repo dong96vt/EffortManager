@@ -5,12 +5,8 @@ namespace EffortManager.AccessDatabase
 {
     public class QueryStringFactory
     {
-        public string GetSelectQueryString(string tableName,string conditions ,params string[] columns){
-            StringBuilder columnsString = new StringBuilder();
-            foreach(var column in columns){
-                columnsString.Append($"{column},");
-            }
-            return $@"SELECT {columnsString.ToString().TrimEnd(',')} FROM {tableName} WHERE {conditions}";
+        public string GetSelectQueryString(string tableName,string conditions){
+            return $@"SELECT * FROM {tableName} WHERE {conditions}";
         }
         public void GetInsertQueryString()
         {

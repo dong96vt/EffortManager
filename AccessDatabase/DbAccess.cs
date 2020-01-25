@@ -4,15 +4,20 @@ using System.Data.SqlClient;
 
 namespace EffortManager.AccessDatabase
 {
-    public class AccessDatabaseExecutor : IDisposable
+    public class DbAccess : IDisposable
     {
         readonly SqlConnection sqlConnection;
-        public AccessDatabaseExecutor(SqlConnection sqlConnection)
+        public DbAccess(){
+            BaseConnection conn = new BaseConnection();
+            conn.CreateConnection();
+            sqlConnection = conn.sqlConnection;
+        }
+        public DbAccess(SqlConnection sqlConnection)
         {
             this.sqlConnection = sqlConnection;
         }
 
-        public DataSet SelectExecute(string tableName, string query)
+        public DataSet ExecuteQuery(string tableName, string query)
         {
             DataSet data = new DataSet(tableName);
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -25,7 +30,7 @@ namespace EffortManager.AccessDatabase
             return data;
         }
 
-        public bool QueryExecute(string query)
+        public bool ExecuteNonQuery(string query)
         {
             try
             {
